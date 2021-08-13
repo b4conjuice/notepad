@@ -27,7 +27,7 @@
     "firebase-admin": "^9.1.1",
     "fuse.js": "^6.0.4",
     "magic-sdk": "^1.4.0",
-    "next": "^9.4.0",
+    "next": "^11.1.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-beautiful-dnd": "^13.0.0",
