@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 // import Link from 'next/link'
 // import { Home, List as ListIcon, Check, ArrowLeftCircle } from 'react-feather'
 
@@ -7,13 +8,17 @@ import List from '../components/List'
 import Todo from '../components/Todo'
 import Markdown from '../components/styles/Markdown'
 // import Footer from '../components/styles/Footer'
+import Note from '../components/Note'
 import { updateNote, searchNotes } from '../lib/api'
 
 export default () => {
-  const slug =
-    typeof window !== 'undefined' ? window.location.pathname.slice(1) : ''
+  const { query } = useRouter()
+  const { params } = query
+  const [slug, ...rest] = params ?? []
+  // const slug =
+  //   typeof window !== 'undefined' ? window.location.pathname.slice(1) : ''
   const [editOrder] = useState(false)
-  const { data } = searchNotes({ slug })
+  const { data, revalidate } = searchNotes({ slug })
   const notes = data || {}
   if (!data)
     return (
@@ -22,6 +27,13 @@ export default () => {
       </Page>
     )
   const [note] = notes
+  if (rest[0] === 'edit') {
+    return (
+      <Page title={note.title} full>
+        <Note note={note} revalidate={revalidate} redirect="/notes" />
+      </Page>
+    )
+  }
   const { markdown, list, table } = note
   const editNote = async updates => updateNote({ _id: note._id, ...updates })
   const title = `${
