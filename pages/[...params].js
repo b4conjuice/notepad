@@ -27,7 +27,7 @@ export default () => {
       </Page>
     )
   const [note] = notes
-  if (rest[0] === 'edit') {
+  if (rest[0] === 'edit' || rest[0] === 'e') {
     return (
       <Page title={note.title} full>
         <Note note={note} revalidate={revalidate} redirect="/notes" />
