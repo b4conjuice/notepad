@@ -17,8 +17,8 @@ const Delete = ({
       {confirmDelete ? (
         <>
           <button
-            className="delete"
-            type="button"
+            className='delete'
+            type='button'
             disabled={isSubmitting}
             onClick={async () => {
               setConfirmDelete(false)
@@ -28,8 +28,8 @@ const Delete = ({
             {isSubmitting ? confirming : confirm}
           </button>
           <button
-            className="delete-cancel"
-            type="button"
+            className='delete-cancel'
+            type='button'
             onClick={() => setConfirmDelete(false)}
           >
             {cancel}
@@ -37,8 +37,8 @@ const Delete = ({
         </>
       ) : (
         <button
-          className="delete"
-          type="button"
+          className='delete'
+          type='button'
           {...props}
           onClick={() => setConfirmDelete(true)}
         >

@@ -13,8 +13,8 @@ export default () => {
       <main>
         <TextArea
           ref={textarea}
-          placeholder="notepad"
-          name="content"
+          placeholder='notepad'
+          name='content'
           value={content}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
@@ -24,7 +24,7 @@ export default () => {
       <Footer>
         <ul>
           <li>
-            <Link href="/notes">
+            <Link href='/notes'>
               <a>
                 <List />
               </a>
@@ -32,7 +32,7 @@ export default () => {
           </li>
           <li>
             <button
-              type="button"
+              type='button'
               onClick={() => {
                 toast.success('cut')
                 cut()

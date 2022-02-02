@@ -27,7 +27,7 @@ export default () => {
       notes?.filter(
         note =>
           selectedTags.length === 0 ||
-          ((selectedTags.includes('none') &&
+          (selectedTags.includes('none') &&
             (!note.tags || note.tags.length === 0 || note.tags[0] === '')) ||
             (selectedTags.includes('=') &&
               note.list &&
@@ -40,7 +40,7 @@ export default () => {
             (selectedTags.includes('md') &&
               note.markdown &&
               note.title.startsWith('# ')) ||
-            selectedTags.some(t => note.tags.some(noteTag => noteTag === t)))
+            selectedTags.some(t => note.tags.some(noteTag => noteTag === t))
       ) || [],
     options: {
       keys: ['title', 'body', 'tags'],
@@ -97,45 +97,44 @@ export default () => {
             />
           </>
         )}
-        {notes?.length > 0 &&
-          noteTags.length > 0 && (
-            <Tags>
-              {noteTags.map(tag => (
-                <li
-                  key={tag}
-                  className={selectedTags.includes(tag) ? 'selected' : ''}
+        {notes?.length > 0 && noteTags.length > 0 && (
+          <Tags>
+            {noteTags.map(tag => (
+              <li
+                key={tag}
+                className={selectedTags.includes(tag) ? 'selected' : ''}
+              >
+                <button
+                  type='button'
+                  onClick={() => {
+                    const newSelectedTags = [...selectedTags]
+                    const index = newSelectedTags.findIndex(t => t === tag)
+                    if (index > -1) {
+                      newSelectedTags.splice(index, 1)
+                    } else newSelectedTags.push(tag)
+                    setSelectedTags(newSelectedTags)
+                  }}
                 >
-                  <button
-                    type="button"
-                    onClick={() => {
-                      const newSelectedTags = [...selectedTags]
-                      const index = newSelectedTags.findIndex(t => t === tag)
-                      if (index > -1) {
-                        newSelectedTags.splice(index, 1)
-                      } else newSelectedTags.push(tag)
-                      setSelectedTags(newSelectedTags)
-                    }}
-                  >
-                    {tag}
-                  </button>
-                </li>
-              ))}
-            </Tags>
-          )}
+                  {tag}
+                </button>
+              </li>
+            ))}
+          </Tags>
+        )}
         {notes ? (
           <>
             <NoteList notes={noteList} revalidate={revalidate} />
             <Footer>
               <ul>
                 <li>
-                  <Link href="/">
+                  <Link href='/'>
                     <a>
                       <Home />
                     </a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/admin?id=new" as="/admin/new">
+                  <Link href='/admin?id=new' as='/admin/new'>
                     <a>
                       <FilePlus />
                     </a>
@@ -153,14 +152,14 @@ export default () => {
           onRequestClose={() => router.push('/admin')}
         >
           {isNew ? (
-            <Note isModal redirect="/admin" />
+            <Note isModal redirect='/admin' />
           ) : (
             <Note
               note={note}
               revalidate={revalidate}
               isNew={isNew}
               isModal
-              redirect="/admin"
+              redirect='/admin'
             />
           )}
           <Footer>
@@ -173,7 +172,7 @@ export default () => {
                 </Link>
               </li>
               <li>
-                <Link href="/admin">
+                <Link href='/admin'>
                   <a>
                     <X />
                   </a>

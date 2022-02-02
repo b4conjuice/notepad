@@ -51,7 +51,7 @@ const Footer = ({ isModal, children }) => {
         {open && children}
         <li>
           <button
-            type="button"
+            type='button'
             onClick={() => {
               setOpen(!open)
             }}
@@ -141,29 +141,29 @@ export default ({
         <Note isModal={isModal}>
           <TextArea
             ref={textarea}
-            name="body"
+            name='body'
             value={content}
-            placeholder="note"
+            placeholder='note'
             onChange={handleTextAreaChange}
             onKeyDown={handleKeyDown}
             autoFocus={autoFocus}
           />
           <input
-            name="slug"
+            name='slug'
             value={slug}
-            placeholder="slug"
+            placeholder='slug'
             onChange={handleChange}
           />
           <input
-            name="tags"
+            name='tags'
             value={tags}
-            placeholder="tags"
+            placeholder='tags'
             onChange={handleChange}
           />
           <input
-            name="hook"
+            name='hook'
             value={hook}
-            placeholder="hook"
+            placeholder='hook'
             onChange={handleChange}
           />
         </Note>
@@ -171,7 +171,7 @@ export default ({
       <Footer isModal={isModal}>
         <li>
           <button
-            type="button"
+            type='button'
             onClick={handleSubmit}
             disabled={(!dirty && !dirtyTextArea) || isSubmitting}
           >
@@ -180,7 +180,7 @@ export default ({
         </li>
         {slug && (
           <li>
-            <button type="button" onClick={() => Router.push(`/${slug}`)}>
+            <button type='button' onClick={() => Router.push(`/${slug}`)}>
               <ArrowRightCircle />
             </button>
           </li>
@@ -188,7 +188,7 @@ export default ({
         {hook && (
           <li>
             <button
-              type="button"
+              type='button'
               onClick={async () => {
                 const { error } = await deployNote(initialNote._id)
                 if (error)

@@ -19,7 +19,7 @@ export default () => {
       return (
         <Page full>
           <main>
-            <Skeleton height="100vh" />
+            <Skeleton height='100vh' />
           </main>
         </Page>
       )
@@ -29,7 +29,7 @@ export default () => {
         <Page full>
           <main>
             <p>you are not authorized to copy this note</p>
-            <Link href="/notes">
+            <Link href='/notes'>
               <a>back to notes</a>
             </Link>
           </main>
@@ -42,7 +42,7 @@ export default () => {
     return (
       <Page full>
         <main>
-          <Note note={note} author={author} redirect="/notes" />
+          <Note note={note} author={author} redirect='/notes' />
         </main>
       </Page>
     )
@@ -50,10 +50,10 @@ export default () => {
   return (
     <Page full>
       {user ? (
-        <Note author={author} redirect="/notes" />
+        <Note author={author} redirect='/notes' />
       ) : (
         <main>
-          <Skeleton height="100vh" />
+          <Skeleton height='100vh' />
         </main>
       )}
     </Page>

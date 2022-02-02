@@ -11,15 +11,11 @@ export default styled.div`
   /* background: pink; */
   /* background-image: ${props =>
     props.background
-      ? `linear-gradient(270deg, ${props.background}, #333333, #333333, ${
-          props.background
-        })`
+      ? `linear-gradient(270deg, ${props.background}, #333333, #333333, ${props.background})`
       : 'linear-gradient(270deg, #193549, #333333, #333333, #193549)'}; */
   background-image: ${props =>
     props.background
-      ? `linear-gradient(270deg, #333333, ${props.background}, ${
-          props.background
-        }, #333333)`
+      ? `linear-gradient(270deg, #333333, ${props.background}, ${props.background}, #333333)`
       : 'linear-gradient(270deg, #193549, #333333, #333333, #193549)'};
   border-radius: ${props => props.borderRadius};
   /* background-image: linear-gradient(270deg, #333333, #193549, #193549, #333333); */

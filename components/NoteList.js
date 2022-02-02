@@ -18,15 +18,15 @@ import { deleteNote, updateNote } from '../lib/api'
 const AuthorField = ({ author: initialAuthor, id, revalidate }) => {
   const [author, setAuthor] = useState(initialAuthor || '')
   return (
-    <div className="author">
+    <div className='author'>
       <input
-        type="text"
+        type='text'
         value={author}
         onChange={e => setAuthor(e.target.value)}
       />
       <button
         disabled={(!initialAuthor && author === '') || initialAuthor === author}
-        type="button"
+        type='button'
         onClick={async () => {
           await updateNote({
             _id: id,
@@ -43,7 +43,7 @@ const AuthorField = ({ author: initialAuthor, id, revalidate }) => {
 }
 
 const Tags = ({ tags }) => (
-  <ul className="tags">
+  <ul className='tags'>
     {tags.map(tag => (
       <li key={tag}>{tag}</li>
     ))}
@@ -60,7 +60,7 @@ export default ({ notes, revalidate }) => {
         <li key={_id}>
           <h2 data-id={_id}>{title}</h2>
           {tags && <Tags tags={tags} />}
-          <div className="commands">
+          <div className='commands'>
             <Link href={`${pathname}?id=${_id}`} as={`${pathname}/${_id}`}>
               <a>
                 <Edit />

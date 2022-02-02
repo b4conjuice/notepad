@@ -46,20 +46,20 @@ const ChangeEmailForm = ({ user }) => {
     <Form onSubmit={handleSubmit}>
       <h2>change email</h2>
       <input
-        name="email"
+        name='email'
         value={email}
-        placeholder="new email"
+        placeholder='new email'
         onChange={handleChange}
       />
       <input
-        name="confirmEmail"
+        name='confirmEmail'
         value={confirmEmail}
-        placeholder="confirm email"
+        placeholder='confirm email'
         onChange={handleChange}
       />
-      {errors.email && <div className="error">{errors.email}</div>}
+      {errors.email && <div className='error'>{errors.email}</div>}
       <button
-        type="submit"
+        type='submit'
         onClick={handleSubmit}
         disabled={!dirty || isSubmitting}
       >
@@ -100,19 +100,19 @@ const DeleteAccountForm = ({ user }) => {
     <Form>
       <h2>delete account</h2>
       <input
-        name="email"
+        name='email'
         value={email}
-        placeholder="confirm your email"
+        placeholder='confirm your email'
         onChange={handleChange}
       />
-      {errors.email && <div className="error">{errors.email}</div>}
+      {errors.email && <div className='error'>{errors.email}</div>}
       <Delete
-        type="button"
+        type='button'
         disabled={!dirty || isSubmitting}
         isSubmitting={isSubmitting}
-        confirm="confirm delete"
-        confirming="deleting"
-        cancel="cancel delete"
+        confirm='confirm delete'
+        confirming='deleting'
+        cancel='cancel delete'
         handleDelete={handleSubmit}
       >
         delete account
@@ -137,7 +137,7 @@ export default () => {
       <Footer>
         <ul>
           <li>
-            <Link href="/">
+            <Link href='/'>
               <a>
                 <X />
               </a>

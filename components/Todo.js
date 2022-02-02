@@ -47,8 +47,8 @@ export default ({ list: initialList, editNote }) => {
   return (
     <>
       <Search
-        placeholder="search"
-        type="text"
+        placeholder='search'
+        type='text'
         value={search}
         onChange={e => setSearch(e.target.value)}
       />
@@ -59,30 +59,30 @@ export default ({ list: initialList, editNote }) => {
           .map(([item, checked], index) => (
             <li key={`${index}`}>
               <input
-                type="checkbox"
+                type='checkbox'
                 name={index}
                 checked={checked === 'x'}
                 onChange={handleChange}
-                tabIndex="-1"
+                tabIndex='-1'
               />
               <input
                 readOnly={checked === 'x'}
-                type="text"
+                type='text'
                 name={index}
                 value={item}
                 onChange={handleChange}
               />
               <button
-                type="button"
+                type='button'
                 onClick={() => deleteItem(index)}
-                tabIndex="-1"
+                tabIndex='-1'
               >
                 -
               </button>
             </li>
           ))}
         <li>
-          <button className="add" type="button" onClick={addItem}>
+          <button className='add' type='button' onClick={addItem}>
             +
           </button>
         </li>

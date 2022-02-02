@@ -80,7 +80,7 @@ export default () => {
                 className={selectedTags.includes(tag) ? 'selected' : ''}
               >
                 <button
-                  type="button"
+                  type='button'
                   onClick={() => {
                     const newSelectedTags = [...selectedTags]
                     const index = newSelectedTags.findIndex(t => t === tag)
@@ -103,7 +103,7 @@ export default () => {
             ) : (
               <>
                 <p>you have no notes.</p>
-                <Link href="/notes?id=new" as="/notes/new">
+                <Link href='/notes?id=new' as='/notes/new'>
                   <a>create one</a>
                 </Link>
               </>
@@ -118,14 +118,14 @@ export default () => {
       <Footer>
         <ul>
           <li>
-            <Link href="/notes?id=new" as="/notes/new">
+            <Link href='/notes?id=new' as='/notes/new'>
               <a>
                 <FilePlus />
               </a>
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href='/'>
               <a>
                 <X />
               </a>
@@ -133,7 +133,7 @@ export default () => {
           </li>
           <li>
             <button
-              type="button"
+              type='button'
               onClick={() => {
                 searchRef.current.focus()
               }}
@@ -148,7 +148,7 @@ export default () => {
         copy={copy}
         revalidate={revalidate}
         author={author}
-        redirect="/notes"
+        redirect='/notes'
       />
     </>
   )

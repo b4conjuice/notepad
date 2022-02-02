@@ -19,9 +19,9 @@ export default () => {
     <Page>
       <main>
         {data ? (
-          <Note note={note} revalidate={revalidate} redirect="/admin" />
+          <Note note={note} revalidate={revalidate} redirect='/admin' />
         ) : (
-          <Skeleton height="100vh" />
+          <Skeleton height='100vh' />
         )}
       </main>
     </Page>

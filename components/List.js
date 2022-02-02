@@ -46,7 +46,7 @@ const DND = ({ items, reorderItems, isOrderedList }) => (
       reorderItems(newItems)
     }}
   >
-    <Droppable droppableId="droppable">
+    <Droppable droppableId='droppable'>
       {(provided, snapshot) => (
         <div {...provided.droppableProps} ref={provided.innerRef}>
           {items.map((item, index) => (
@@ -67,7 +67,7 @@ const DND = ({ items, reorderItems, isOrderedList }) => (
                     {isOrderedList
                       ? `${index + 1}. ${removeNumbers(item)}`
                       : item}{' '}
-                    <Move height="2rem" />
+                    <Move height='2rem' />
                   </div>
                 )
               }}
@@ -81,12 +81,12 @@ const DND = ({ items, reorderItems, isOrderedList }) => (
 )
 
 const SelectItems = ({ items, selectedItems, setSelectedItems }) => (
-  <ul className="selectItems">
+  <ul className='selectItems'>
     {items.map((item, index) => (
       <li key={index}>
         <span>{item}</span>{' '}
         <input
-          type="checkbox"
+          type='checkbox'
           checked={selectedItems[index]}
           onChange={() => {
             const newSelectedItems = [...selectedItems]
@@ -174,7 +174,7 @@ export default ({ note: { _id, list, title } }) => {
         <ul>
           <li>
             <button
-              type="button"
+              type='button'
               onClick={() => {
                 searchRef.current.focus()
               }}
@@ -183,7 +183,7 @@ export default ({ note: { _id, list, title } }) => {
             </button>
           </li>
           <li>
-            <Link href="/notes">
+            <Link href='/notes'>
               <a>
                 <X />
               </a>
@@ -195,7 +195,7 @@ export default ({ note: { _id, list, title } }) => {
                 <>
                   <li>
                     <button
-                      type="button"
+                      type='button'
                       disabled={
                         search !== '' ||
                         selectedItems.filter(i => i).length === 0
@@ -220,7 +220,7 @@ export default ({ note: { _id, list, title } }) => {
                   </li>
                   <li>
                     <button
-                      type="button"
+                      type='button'
                       disabled={
                         search !== '' ||
                         selectedItems.filter(i => i).length === 0
@@ -247,7 +247,7 @@ export default ({ note: { _id, list, title } }) => {
               )}
               <li>
                 <button
-                  type="button"
+                  type='button'
                   disabled={search !== ''}
                   onClick={() => {
                     setSelectItems(!selectItems)
@@ -261,7 +261,7 @@ export default ({ note: { _id, list, title } }) => {
           {!selectItems && (
             <li>
               <button
-                type="button"
+                type='button'
                 disabled={search !== ''}
                 onClick={() => {
                   setEditListOrder(!editListOrder)

@@ -20,7 +20,7 @@ export default () => {
     return (
       <Page full>
         <main>
-          <Skeleton height="100vh" />
+          <Skeleton height='100vh' />
         </main>
       </Page>
     )
@@ -30,7 +30,7 @@ export default () => {
       <Page>
         <main>
           <p>you are not authorized to see this markdown</p>
-          <Link href="/notes">
+          <Link href='/notes'>
             <a>back to notes</a>
           </Link>
         </main>
@@ -42,7 +42,7 @@ export default () => {
       <Page>
         <main>
           <p>this note is not markdown</p>
-          <Link href="/notes">
+          <Link href='/notes'>
             <a>back to notes</a>
           </Link>
         </main>
@@ -56,7 +56,7 @@ export default () => {
       <Footer>
         <ul>
           <li>
-            <Link href="/notes">
+            <Link href='/notes'>
               <a>
                 <X />
               </a>

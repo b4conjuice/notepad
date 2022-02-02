@@ -39,7 +39,7 @@ const ChecklistItem = ({
   return (
     <>
       <input
-        type="checkbox"
+        type='checkbox'
         checked={checked}
         onChange={toggleCheck}
         readOnly={!toggleCheck}
@@ -48,8 +48,8 @@ const ChecklistItem = ({
         ref={ref}
         className={checked ? 'checked' : undefined}
         readOnly={checked || !editItem}
-        type="text"
-        name="item"
+        type='text'
+        name='item'
         value={name}
         onChange={e => editItem(e.target.value)}
         onKeyDown={async e => {
@@ -76,7 +76,7 @@ const ChecklistItem = ({
         }}
       />
       {deleteItem && (
-        <Delete handleDelete={deleteItem} tabIndex="-1">
+        <Delete handleDelete={deleteItem} tabIndex='-1'>
           <Trash />
         </Delete>
       )}
@@ -101,7 +101,7 @@ const DND = ({ items, reorderItems, isDuplicate }) => (
       reorderItems(newItems)
     }}
   >
-    <Droppable droppableId="droppable">
+    <Droppable droppableId='droppable'>
       {(provided, snapshot) => (
         <div {...provided.droppableProps} ref={provided.innerRef}>
           {items.map((item, index) => (
@@ -121,7 +121,7 @@ const DND = ({ items, reorderItems, isDuplicate }) => (
                     {...dragHandleProps}
                   >
                     <ChecklistItem item={item} />
-                    <Move height="2rem" />
+                    <Move height='2rem' />
                   </div>
                 )
               }}
@@ -324,7 +324,7 @@ export default ({ note: { _id, table, title, body }, revalidate }) => {
         <ul>
           <li>
             <button
-              type="button"
+              type='button'
               disabled={search !== ''}
               onClick={() => {
                 setEditListOrder(!editListOrder)
@@ -335,7 +335,7 @@ export default ({ note: { _id, table, title, body }, revalidate }) => {
           </li>
           <li>
             <button
-              type="button"
+              type='button'
               onClick={() => {
                 searchRef.current.focus()
               }}
@@ -344,7 +344,7 @@ export default ({ note: { _id, table, title, body }, revalidate }) => {
             </button>
           </li>
           <li>
-            <Link href="/notes">
+            <Link href='/notes'>
               <a>
                 <X />
               </a>
@@ -352,7 +352,7 @@ export default ({ note: { _id, table, title, body }, revalidate }) => {
           </li>
           <li>
             <button
-              type="button"
+              type='button'
               disabled={search !== ''}
               onClick={async () => {
                 await addItem()
@@ -372,7 +372,7 @@ export default ({ note: { _id, table, title, body }, revalidate }) => {
                   ''
                 )
               }
-              type="button"
+              type='button'
               onClick={() => {
                 const sorted = [...items].sort(sortByChecked)
                 updateChecklist(sorted)

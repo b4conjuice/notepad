@@ -17,7 +17,7 @@ export default () => {
     return (
       <Page full>
         <main>
-          <Skeleton height="100vh" />
+          <Skeleton height='100vh' />
         </main>
       </Page>
     )
@@ -27,7 +27,7 @@ export default () => {
       <Page full>
         <main>
           <p>you are not authorized to see this note</p>
-          <Link href="/notes">
+          <Link href='/notes'>
             <a>back to notes</a>
           </Link>
         </main>
@@ -35,7 +35,7 @@ export default () => {
     )
   return (
     <Page title={note.title} full>
-      <Note note={note} revalidate={revalidate} redirect="/notes" />
+      <Note note={note} revalidate={revalidate} redirect='/notes' />
     </Page>
   )
 }

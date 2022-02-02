@@ -23,17 +23,17 @@ export default ({ title }) => {
       {user?.email && (
         <>
           <span>{user.email}</span>
-          <Link href="/notes">
+          <Link href='/notes'>
             <a>
               <List />
             </a>
           </Link>
-          <Link href="/account">
+          <Link href='/account'>
             <a>
               <User />
             </a>
           </Link>
-          <Link href="/api/auth/logout">
+          <Link href='/api/auth/logout'>
             <a>
               <LogOut />
             </a>

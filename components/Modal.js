@@ -33,7 +33,7 @@ export default ({ note, copy, revalidate, author, redirect }) => {
   }
   return (
     <Modal
-      htmlOpenClassName="ReactModal__Html--open"
+      htmlOpenClassName='ReactModal__Html--open'
       style={modalStyles}
       isOpen={!!router.query.id || !!router.query.copy}
       onRequestClose={router.back}
@@ -73,7 +73,7 @@ export default ({ note, copy, revalidate, author, redirect }) => {
             </Link>
           </li>
           <li>
-            <button type="button" onClick={router.back}>
+            <button type='button' onClick={router.back}>
               <X />
             </button>
           </li>

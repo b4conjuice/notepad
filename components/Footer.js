@@ -7,22 +7,22 @@ export default ({ open, toggleOpen, copy, cut }) => (
   <footer>
     <ul>
       <li>
-        <button type="button" onClick={copy}>
+        <button type='button' onClick={copy}>
           <Copy />
         </button>
       </li>
       <li>
-        <button type="button" onClick={cut}>
+        <button type='button' onClick={cut}>
           <Scissors />
         </button>
       </li>
       <li>
-        <button type="button" onClick={copy}>
+        <button type='button' onClick={copy}>
           <Download />
         </button>
       </li>
     </ul>
-    <button type="button" onClick={toggleOpen}>
+    <button type='button' onClick={toggleOpen}>
       {open ? <X /> : <Command />}
     </button>
   </footer>

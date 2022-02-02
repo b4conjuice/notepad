@@ -30,7 +30,7 @@ export default () => {
   if (rest[0] === 'edit' || rest[0] === 'e') {
     return (
       <Page title={note.title} full>
-        <Note note={note} revalidate={revalidate} redirect="/notes" />
+        <Note note={note} revalidate={revalidate} redirect='/notes' />
       </Page>
     )
   }
@@ -40,13 +40,13 @@ export default () => {
     markdown
       ? note.title.replace('# ', '')
       : list
-        ? note.title.replace('= ', '')
-        : note.title
+      ? note.title.replace('= ', '')
+      : note.title
   }`
   return (
     <Page title={title}>
       <main>
-        <div className="content">
+        <div className='content'>
           {markdown ? (
             <Markdown dangerouslySetInnerHTML={{ __html: markdown }} />
           ) : note.title.includes('[ ') ? (

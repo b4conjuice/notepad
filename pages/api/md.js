@@ -1,11 +1,11 @@
-import axios from 'axios';
+import axios from 'axios'
 
 export default async (req, res) => {
   const data = {
     text: req.body.text,
-  };
+  }
 
-  const md = await axios.post('https://marked.now.sh', data);
+  const md = await axios.post('https://marked.now.sh', data)
   /*
 const request = require('request')
 
@@ -33,5 +33,5 @@ request.post(
     message: '/api/md',
     text: req.body.text,
     md: md.data,
-  });
-};
+  })
+}

@@ -46,18 +46,18 @@ export default () => {
       <main>
         <Form onSubmit={submit}>
           <h1>login</h1>
-          <input type="email" name="email" placeholder="email" required />
-          <button type="submit" disabled={submitting}>
+          <input type='email' name='email' placeholder='email' required />
+          <button type='submit' disabled={submitting}>
             submit
             {submitting ? 'ting' : ''}
           </button>
-          {errorMessage && <p className="error">{errorMessage}</p>}
+          {errorMessage && <p className='error'>{errorMessage}</p>}
         </Form>
       </main>
       <Footer>
         <ul>
           <li>
-            <Link href="/">
+            <Link href='/'>
               <a>
                 <X />
               </a>
