@@ -67,9 +67,7 @@ export default ({ note, copy, revalidate, author, redirect }) => {
         <ul>
           <li>
             <Link href={`${pathname}/${router.query.id}`}>
-              <a>
-                <ArrowRightCircle />
-              </a>
+              <ArrowRightCircle />
             </Link>
           </li>
           <li>

@@ -23,9 +23,7 @@ export default () => {
       <Page full>
         <main>
           <p>you are not authorized to see this note</p>
-          <Link href='/notes'>
-            <a>back to notes</a>
-          </Link>
+          <Link href='/notes'>back to notes</Link>
         </main>
       </Page>
     )

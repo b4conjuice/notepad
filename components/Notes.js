@@ -103,8 +103,8 @@ export default () => {
             ) : (
               <>
                 <p>you have no notes.</p>
-                <Link href='/notes?id=new' as='/notes/new'>
-                  <a>create one</a>
+                <Link href="/notes?id=new" as="/notes/new">
+                  create one
                 </Link>
               </>
             )
@@ -118,17 +118,13 @@ export default () => {
       <Footer>
         <ul>
           <li>
-            <Link href='/notes?id=new' as='/notes/new'>
-              <a>
-                <FilePlus />
-              </a>
+            <Link href="/notes?id=new" as="/notes/new">
+              <FilePlus />
             </Link>
           </li>
           <li>
-            <Link href='/'>
-              <a>
-                <X />
-              </a>
+            <Link href="/">
+              <X />
             </Link>
           </li>
           <li>

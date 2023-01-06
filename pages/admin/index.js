@@ -29,18 +29,18 @@ export default () => {
           selectedTags.length === 0 ||
           (selectedTags.includes('none') &&
             (!note.tags || note.tags.length === 0 || note.tags[0] === '')) ||
-            (selectedTags.includes('=') &&
-              note.list &&
-              note.list.length > 0 &&
-              note.title.startsWith('= ')) ||
-            (selectedTags.includes('[') &&
-              note.table &&
-              note.table.length > 0 &&
-              note.title.startsWith('[ ')) ||
-            (selectedTags.includes('md') &&
-              note.markdown &&
-              note.title.startsWith('# ')) ||
-            selectedTags.some(t => note.tags.some(noteTag => noteTag === t))
+          (selectedTags.includes('=') &&
+            note.list &&
+            note.list.length > 0 &&
+            note.title.startsWith('= ')) ||
+          (selectedTags.includes('[') &&
+            note.table &&
+            note.table.length > 0 &&
+            note.title.startsWith('[ ')) ||
+          (selectedTags.includes('md') &&
+            note.markdown &&
+            note.title.startsWith('# ')) ||
+          selectedTags.some(t => note.tags.some(noteTag => noteTag === t))
       ) || [],
     options: {
       keys: ['title', 'body', 'tags'],
@@ -105,7 +105,7 @@ export default () => {
                 className={selectedTags.includes(tag) ? 'selected' : ''}
               >
                 <button
-                  type='button'
+                  type="button"
                   onClick={() => {
                     const newSelectedTags = [...selectedTags]
                     const index = newSelectedTags.findIndex(t => t === tag)
@@ -127,17 +127,13 @@ export default () => {
             <Footer>
               <ul>
                 <li>
-                  <Link href='/'>
-                    <a>
-                      <Home />
-                    </a>
+                  <Link href="/">
+                    <Home />
                   </Link>
                 </li>
                 <li>
-                  <Link href='/admin?id=new' as='/admin/new'>
-                    <a>
-                      <FilePlus />
-                    </a>
+                  <Link href="/admin?id=new" as="/admin/new">
+                    <FilePlus />
                   </Link>
                 </li>
               </ul>
@@ -166,16 +162,19 @@ export default () => {
             <ul>
               <li>
                 <Link href={`/admin/${router.query.id}`}>
-                  <a>
-                    <ArrowRightCircle />
-                  </a>
+                  <ArrowRightCircle />
                 </Link>
               </li>
               <li>
+<<<<<<< HEAD
                 <Link href='/admin'>
                   <a>
                     <X />
                   </a>
+=======
+                <Link href="/admin">
+                  <X />
+>>>>>>> niel
                 </Link>
               </li>
             </ul>

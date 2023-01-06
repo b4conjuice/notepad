@@ -183,10 +183,8 @@ export default ({ note: { _id, list, title } }) => {
             </button>
           </li>
           <li>
-            <Link href='/notes'>
-              <a>
-                <X />
-              </a>
+            <Link href="/notes">
+              <X />
             </Link>
           </li>
           {!editListOrder && (

@@ -30,9 +30,7 @@ export default () => {
       <Page>
         <main>
           <p>you are not authorized to see this markdown</p>
-          <Link href='/notes'>
-            <a>back to notes</a>
-          </Link>
+          <Link href='/notes'>back to notes</Link>
         </main>
       </Page>
     )
@@ -42,9 +40,7 @@ export default () => {
       <Page>
         <main>
           <p>this note is not markdown</p>
-          <Link href='/notes'>
-            <a>back to notes</a>
-          </Link>
+          <Link href='/notes'>back to notes</Link>
         </main>
       </Page>
     )
@@ -57,9 +53,7 @@ export default () => {
         <ul>
           <li>
             <Link href='/notes'>
-              <a>
-                <X />
-              </a>
+              <X />
             </Link>
           </li>
         </ul>
