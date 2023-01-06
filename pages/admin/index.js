@@ -105,7 +105,7 @@ export default () => {
                 className={selectedTags.includes(tag) ? 'selected' : ''}
               >
                 <button
-                  type="button"
+                  type='button'
                   onClick={() => {
                     const newSelectedTags = [...selectedTags]
                     const index = newSelectedTags.findIndex(t => t === tag)
@@ -127,12 +127,12 @@ export default () => {
             <Footer>
               <ul>
                 <li>
-                  <Link href="/">
+                  <Link href='/'>
                     <Home />
                   </Link>
                 </li>
                 <li>
-                  <Link href="/admin?id=new" as="/admin/new">
+                  <Link href='/admin?id=new' as='/admin/new'>
                     <FilePlus />
                   </Link>
                 </li>
@@ -166,15 +166,8 @@ export default () => {
                 </Link>
               </li>
               <li>
-<<<<<<< HEAD
                 <Link href='/admin'>
-                  <a>
-                    <X />
-                  </a>
-=======
-                <Link href="/admin">
                   <X />
->>>>>>> niel
                 </Link>
               </li>
             </ul>
