@@ -27,20 +27,20 @@ export default () => {
       notes?.filter(
         note =>
           selectedTags.length === 0 ||
-          ((selectedTags.includes('none') &&
+          (selectedTags.includes('none') &&
             (!note.tags || note.tags.length === 0 || note.tags[0] === '')) ||
-            (selectedTags.includes('=') &&
-              note.list &&
-              note.list.length > 0 &&
-              note.title.startsWith('= ')) ||
-            (selectedTags.includes('[') &&
-              note.table &&
-              note.table.length > 0 &&
-              note.title.startsWith('[ ')) ||
-            (selectedTags.includes('md') &&
-              note.markdown &&
-              note.title.startsWith('# ')) ||
-            selectedTags.some(t => note.tags.some(noteTag => noteTag === t)))
+          (selectedTags.includes('=') &&
+            note.list &&
+            note.list.length > 0 &&
+            note.title.startsWith('= ')) ||
+          (selectedTags.includes('[') &&
+            note.table &&
+            note.table.length > 0 &&
+            note.title.startsWith('[ ')) ||
+          (selectedTags.includes('md') &&
+            note.markdown &&
+            note.title.startsWith('# ')) ||
+          selectedTags.some(t => note.tags.some(noteTag => noteTag === t))
       ) || [],
     options: {
       keys: ['title', 'body', 'tags'],
@@ -97,31 +97,30 @@ export default () => {
             />
           </>
         )}
-        {notes?.length > 0 &&
-          noteTags.length > 0 && (
-            <Tags>
-              {noteTags.map(tag => (
-                <li
-                  key={tag}
-                  className={selectedTags.includes(tag) ? 'selected' : ''}
+        {notes?.length > 0 && noteTags.length > 0 && (
+          <Tags>
+            {noteTags.map(tag => (
+              <li
+                key={tag}
+                className={selectedTags.includes(tag) ? 'selected' : ''}
+              >
+                <button
+                  type="button"
+                  onClick={() => {
+                    const newSelectedTags = [...selectedTags]
+                    const index = newSelectedTags.findIndex(t => t === tag)
+                    if (index > -1) {
+                      newSelectedTags.splice(index, 1)
+                    } else newSelectedTags.push(tag)
+                    setSelectedTags(newSelectedTags)
+                  }}
                 >
-                  <button
-                    type="button"
-                    onClick={() => {
-                      const newSelectedTags = [...selectedTags]
-                      const index = newSelectedTags.findIndex(t => t === tag)
-                      if (index > -1) {
-                        newSelectedTags.splice(index, 1)
-                      } else newSelectedTags.push(tag)
-                      setSelectedTags(newSelectedTags)
-                    }}
-                  >
-                    {tag}
-                  </button>
-                </li>
-              ))}
-            </Tags>
-          )}
+                  {tag}
+                </button>
+              </li>
+            ))}
+          </Tags>
+        )}
         {notes ? (
           <>
             <NoteList notes={noteList} revalidate={revalidate} />
@@ -129,16 +128,12 @@ export default () => {
               <ul>
                 <li>
                   <Link href="/">
-                    <a>
-                      <Home />
-                    </a>
+                    <Home />
                   </Link>
                 </li>
                 <li>
                   <Link href="/admin?id=new" as="/admin/new">
-                    <a>
-                      <FilePlus />
-                    </a>
+                    <FilePlus />
                   </Link>
                 </li>
               </ul>
@@ -167,16 +162,12 @@ export default () => {
             <ul>
               <li>
                 <Link href={`/admin/${router.query.id}`}>
-                  <a>
-                    <ArrowRightCircle />
-                  </a>
+                  <ArrowRightCircle />
                 </Link>
               </li>
               <li>
                 <Link href="/admin">
-                  <a>
-                    <X />
-                  </a>
+                  <X />
                 </Link>
               </li>
             </ul>

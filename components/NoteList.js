@@ -62,44 +62,33 @@ export default ({ notes, revalidate }) => {
           {tags && <Tags tags={tags} />}
           <div className="commands">
             <Link href={`${pathname}?id=${_id}`} as={`${pathname}/${_id}`}>
-              <a>
-                <Edit />
-              </a>
+              <Edit />
             </Link>
             {list && (
               <Link href={`/lists/${_id}`}>
-                <a>
-                  <List />
-                </a>
+                <List />
               </Link>
             )}
             {title.startsWith('[ ') && (
               <Link href={`/checklists/${_id}`}>
-                <a>
-                  <CheckSquare />
-                </a>
+                <CheckSquare />
               </Link>
             )}
             {markdown && (
               <Link href={`/md/${_id}`}>
-                <a>
-                  <Hash />
-                </a>
+                <Hash />
               </Link>
             )}
             {!admin && (
               <Link href={`${pathname}?copy=${_id}`} as={pathname}>
                 {/* <Link href={`${pathname}/new?id=${_id}`} as={`${pathname}/new`}> */}
-                <a>
-                  <Copy />
-                </a>
+
+                <Copy />
               </Link>
             )}
             {slug && (
               <Link href={`/${slug}`}>
-                <a>
-                  <ArrowRightCircle />
-                </a>
+                <ArrowRightCircle />
               </Link>
             )}
             <Delete

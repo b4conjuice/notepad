@@ -104,7 +104,7 @@ export default () => {
               <>
                 <p>you have no notes.</p>
                 <Link href="/notes?id=new" as="/notes/new">
-                  <a>create one</a>
+                  create one
                 </Link>
               </>
             )
@@ -119,16 +119,12 @@ export default () => {
         <ul>
           <li>
             <Link href="/notes?id=new" as="/notes/new">
-              <a>
-                <FilePlus />
-              </a>
+              <FilePlus />
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a>
-                <X />
-              </a>
+              <X />
             </Link>
           </li>
           <li>

@@ -28,8 +28,8 @@ export default () => {
     markdown
       ? note.title.replace('# ', '')
       : list
-        ? note.title.replace('= ', '')
-        : note.title
+      ? note.title.replace('= ', '')
+      : note.title
   }`
   return (
     <Page title={title}>
@@ -60,16 +60,12 @@ export default () => {
             <>
               <li>
                 <Link href="/admin">
-                  <a>
                     <ArrowLeftCircle />
-                  </a>
                 </Link>
               </li>
               <li>
                 <Link href="/">
-                  <a>
                     <Home />
-                  </a>
                 </Link>
               </li>
               {list &&

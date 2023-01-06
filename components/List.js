@@ -149,9 +149,7 @@ export default ({ note: { _id, list, title } }) => {
           </li>
           <li>
             <Link href="/notes">
-              <a>
-                <X />
-              </a>
+              <X />
             </Link>
           </li>
           <li>

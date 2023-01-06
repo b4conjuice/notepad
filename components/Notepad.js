@@ -25,9 +25,7 @@ export default () => {
         <ul>
           <li>
             <Link href="/notes">
-              <a>
-                <List />
-              </a>
+              <List />
             </Link>
           </li>
           <li>

@@ -58,9 +58,7 @@ export default () => {
         <ul>
           <li>
             <Link href="/">
-              <a>
-                <X />
-              </a>
+              <X />
             </Link>
           </li>
         </ul>
