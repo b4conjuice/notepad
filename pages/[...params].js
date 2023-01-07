@@ -66,39 +66,6 @@ export default () => {
             </>
           )}
         </div>
-        {/* <Footer>
-        <ul>
-          {!note.title.includes('[ ') && (
-            <>
-              <li>
-                <Link href="/admin">
-                    <ArrowLeftCircle />
-                </Link>
-              </li>
-              <li>
-                <Link href="/">
-                    <Home />
-                </Link>
-              </li>
-              {list &&
-                list.length > 0 && (
-                  <li>
-                    <button type="button" onClick={() => setEditOrder(!editOrder)}>
-                      {editOrder ? <Check /> : <ListIcon />}
-                    </button>
-                  </li>
-                )}
-            </>
-          )} */}
-        {/* {note.title.includes('[ ') && (
-            <li>
-              <button type="button" onClick={() => setEditOrder(!editOrder)}>
-                +
-              </button>
-            </li>
-          )} */}
-        {/* </ul>
-      </Footer> */}
       </main>
     </Page>
   )

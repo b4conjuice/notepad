@@ -53,10 +53,9 @@ const Tags = ({ tags }) => (
 export default ({ notes, revalidate }) => {
   const router = useRouter()
   const { pathname } = router
-  const admin = pathname.includes('admin')
   return (
     <NoteList>
-      {notes.map(({ _id, title, tags, slug, author, list, markdown }) => (
+      {notes.map(({ _id, title, tags, slug, list, markdown }) => (
         <li key={_id}>
           <h2 data-id={_id}>{title}</h2>
           {tags && <Tags tags={tags} />}
@@ -79,13 +78,9 @@ export default ({ notes, revalidate }) => {
                 <Hash />
               </Link>
             )}
-            {!admin && (
-              <Link href={`${pathname}?copy=${_id}`} as={pathname}>
-                {/* <Link href={`${pathname}/new?id=${_id}`} as={`${pathname}/new`}> */}
-
-                <Copy />
-              </Link>
-            )}
+            <Link href={`${pathname}?copy=${_id}`} as={pathname}>
+              <Copy />
+            </Link>
             {slug && (
               <Link href={`/${slug}`}>
                 <ArrowRightCircle />
@@ -99,9 +94,6 @@ export default ({ notes, revalidate }) => {
               }}
             />
           </div>
-          {admin && (
-            <AuthorField author={author} id={_id} revalidate={revalidate} />
-          )}
         </li>
       ))}
     </NoteList>
