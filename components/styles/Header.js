@@ -30,6 +30,9 @@ export default styled.header`
     border: none;
     padding: 0;
   }
+  button: hover {
+    cursor: pointer;
+  }
   @media ${device.tablet} {
     h1 {
       span {
