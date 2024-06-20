@@ -23,15 +23,15 @@ export default ({ title }) => {
       {user?.email && (
         <>
           <span>{user.email}</span>
-          <Link href="/notes">
+          <Link href='/notes'>
             <List />
           </Link>
-          <Link href="/account">
+          <Link href='/account'>
             <User />
           </Link>
-          <Link href="/api/auth/logout">
+          <button onClick={() => (window.location.href = '/api/auth/logout')}>
             <LogOut />
-          </Link>
+          </button>
         </>
       )}
     </Header>

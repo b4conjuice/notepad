@@ -19,10 +19,16 @@ export default styled.header`
       display: none;
     }
   }
-  a {
+  a,
+  button {
     color: ${props => props.theme.color};
     display: flex;
     align-items: center;
+  }
+  button {
+    background: none;
+    border: none;
+    padding: 0;
   }
   @media ${device.tablet} {
     h1 {

@@ -3,7 +3,6 @@
 ## todo
 
 - remove reference to dlo.sh here: `config/index.js`
-- fix logout
 
 - multiple line command (add space to bottom of note)
 - tag command
