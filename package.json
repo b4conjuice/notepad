@@ -1,14 +1,10 @@
 {
-  "name": "notes",
+  "name": "notepad",
   "version": "1.0.0",
   "main": "index.js",
   "author": "daniel lopez",
   "license": "MIT",
-  "description": "notes",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dlopez807/notes.git"
-  },
+  "description": "notepad",
   "scripts": {
     "dev": "next -p 1234",
     "build": "next build",

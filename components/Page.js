@@ -6,7 +6,7 @@ import Notification from './Notification'
 import Layout from './styles/Layout'
 import Global from './styles/Global'
 
-const DEFAULT_TITLE = 'notes'
+const DEFAULT_TITLE = 'notepad'
 
 const Page = ({ title, children, ...layoutOptions }) => (
   <Layout {...layoutOptions}>

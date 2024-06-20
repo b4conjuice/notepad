@@ -37,7 +37,7 @@ export default class MyDocument extends Document {
             name='viewport'
             content='width=device-width, initial-scale=1, shrink-to-fit=no'
           />
-          <meta name='description' content='notes' />
+          <meta name='description' content='notepad' />
           <meta charSet='utf-8' />
           <link rel='shortcut icon' href='/favicon.png' />
           <link rel='apple-touch-icon' sizes='57x57' href='/icon.png' />
